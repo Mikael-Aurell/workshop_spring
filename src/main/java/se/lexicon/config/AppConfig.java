@@ -8,7 +8,7 @@ import se.lexicon.dao.StudentDaoImpl;
 //using java
 @Configuration
 public class AppConfig {
-    @Bean("StudentDao")
+    @Bean("studentDao")
     public StudentDao studentDao(){
         return new StudentDaoImpl();
     }
