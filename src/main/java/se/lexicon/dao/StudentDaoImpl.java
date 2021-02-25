@@ -1,15 +1,15 @@
 package se.lexicon.dao;
 
+import org.springframework.stereotype.Component;
 import se.lexicon.dao.sequencer.StudentSequencer;
 import se.lexicon.model.Student;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 
 
+@Component
 public class StudentDaoImpl implements StudentDao {
 
     private List<Student> students = new ArrayList<>();
@@ -19,7 +19,6 @@ public class StudentDaoImpl implements StudentDao {
         if (student.getId() == 0){
             student.setId(StudentSequencer.nextStudentId());
         }
-
         students.add(student);
 
         return student;
