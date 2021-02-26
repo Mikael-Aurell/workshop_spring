@@ -30,7 +30,6 @@ public class StudentManagementConsoleImpl implements StudentManagement {
         System.out.println("Type student name: ");
         String newName = userinputService.getString();
 
-
         Student newStudent = new Student();
         newStudent.setName(newName);
 
@@ -69,10 +68,10 @@ public class StudentManagementConsoleImpl implements StudentManagement {
             System.out.println("The student is"+student+".");
             System.out.println("Type the new name of student: ");
             String newName = userinputService.getString();
-            Student editedStudent = original;
-            editedStudent.setName(newName);
 
-            return editedStudent;
+            original.setName(newName);
+
+            return original;
         }
 
         return null;

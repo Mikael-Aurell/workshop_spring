@@ -36,6 +36,7 @@ public class StudentDaoImpl implements StudentDao {
 
     @Override
     public List<Student> findAll() {
+        if (students == null) System.out.println("The list of student is empty.");
         return students;
 
     }
